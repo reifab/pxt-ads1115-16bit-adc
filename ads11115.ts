@@ -249,16 +249,6 @@ namespace adc {
     let ads = new ADS1115();
 
     /**
-     * Setzt die I2C Adresse. Standard: 0x48
-     * @param i2CAddress I2C Adresse
-     */
-    //% block 
-    //%i2cAddress.defl=0x48
-    export function setI2CAddress(i2CAddress: number): void {
-        ads.begin(i2CAddress)
-    }
-
-    /**
      * Setzt den Betriebsmodus
      * @param operateMode Betriebsmodus
      */
