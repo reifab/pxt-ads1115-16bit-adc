@@ -252,8 +252,9 @@ namespace adc {
      * Setzt die I2C Adresse. Standard: 0x48
      * @param i2CAddress I2C Adresse
      */
-    //% block
-    export function begin(i2CAddress: number): void {
+    //% block 
+    //%i2cAddress.defl=0x48
+    export function setI2CAddress(i2CAddress: number): void {
         ads.begin(i2CAddress)
     }
 
@@ -313,17 +314,12 @@ namespace adc {
         let voltage: number
         let numberOfLoops: number
         numberOfLoops = 10
-
         adcValue = 0;
         for (let i = 0; i < numberOfLoops; i++) {
             adcValue += ads.getConversionResults(ch);
-        }
-        
+        }        
         adcValue = adcValue / numberOfLoops;
-
         voltage = adcValue * ads.getPGAGain() / 1000
-
-        
         return voltage;
     }
 }

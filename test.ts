@@ -1,5 +1,5 @@
 // Gib deinen Code hier ein
-adc.begin(72)
+adc.setI2CAddress(72)
 adc.setOperateStatus(OperateStatus.SINGLE)
 adc.setOperateMode(OperateModes.SINGLE)
 adc.setSampleRate(SampligRate.DR_860)
