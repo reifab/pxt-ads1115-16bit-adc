@@ -179,21 +179,6 @@ class ADS1115 {
         if (channel < 4 && ret_val < 0) ret_val = 0;
         return (ret_val);
     };
-
-    setCompaMode(CompaMode: number): void {
-    };
-    setCompaPolarity(CompaPolarity: number): void {
-    };
-    setCompaLatching(CompaLatching: number): void {
-    };
-    setCompaQueue(CompaQueue: number): void {
-    };
-
-    setLowThreshold(threshold: number): void {
-    };
-
-    setHighThreshold(threshold: number): void {
-    };
 }
 
 enum OperateModes {
@@ -251,19 +236,7 @@ enum Channel {
     //% block="CH0"
     channel0 = 0,
     //% block="CH1"
-    channel1,
-    //% block="CH2"
-    channel2,
-    //% block="CH3"
-    channel3,
-    //% block="CH4"
-    channel01,
-    //% block="CH5"
-    channel03,
-    //% block="CH6"
-    channel13,
-    //% block="CH7"
-    channel23
+    channel1
 }
 
 /**
@@ -353,6 +326,4 @@ namespace adc {
         
         return voltage;
     }
-
-
 }
