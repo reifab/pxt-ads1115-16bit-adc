@@ -11,8 +11,7 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "ads11115.ts",
-        "test.ts"
+        "ads11115.ts"
     ],
     "testFiles": [
         "test.ts"
